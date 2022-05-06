@@ -33,6 +33,7 @@ facteur:
 %start main
 %%
 main:
+
     expression EOL {}
 ;
 expression:
