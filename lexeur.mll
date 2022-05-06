@@ -5,9 +5,11 @@
     exception TokenInconu
 }
 rule token = parse
-    [' ' '\t'] { token lexbuf }
-    | ['\n'] { EOL }
-    | ['0'-'9' ]+ { NOMBRE }
+    [' ' '\t' '\n'] { token lexbuf }
+    (*| ['\n'] { EOL }*)
+    | ';' {PT_VIRG}
+    (*| ['0'-'9' ]+ { NOMBRE }*)
+    | ['0'-'9' ]+(['.'] ['0'-'9']*)? { NOMBRE }
     | '+' { PLUS }
     | '-' { MOINS }
     | '*' { FOIS }
