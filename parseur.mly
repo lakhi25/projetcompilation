@@ -1,5 +1,7 @@
+
 %token NOMBRE PLUS MOINS FOIS GPAREN DPAREN PT_VIRG
-%type <unit> main expression terme facteur
+
+%type <unit> main expression 
 %start main
 %%
 main:
@@ -20,3 +22,25 @@ facteur:
     | MOINS facteur {}
     | NOMBRE {}
 ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
